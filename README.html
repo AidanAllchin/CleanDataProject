@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-07-08" />
 
-<title>CodeBook</title>
+<title>README</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,109 +350,55 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">CodeBook</h1>
+<h1 class="title toc-ignore">README</h1>
 <h4 class="author">Aidan</h4>
 <h4 class="date">2023-07-08</h4>
 
 </div>
 
 
-<div id="experiment-description" class="section level2">
-<h2>Experiment Description</h2>
-<div id="from-jorge-l.-reyes-ortiz-et-al" class="section level5">
-<h5>(from Jorge L. Reyes-Ortiz et al)</h5>
-<p>The experiments have been carried out with a group of 30 volunteers
-within an age bracket of 19-48 years. Each person performed six
-activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING,
-STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the
-waist. Using its embedded accelerometer and gyroscope, we captured
-3-axial linear acceleration and 3-axial angular velocity at a constant
-rate of 50Hz. The experiments have been video-recorded to label the data
-manually. The obtained dataset has been randomly partitioned into two
-sets, where 70% of the volunteers was selected for generating the
-training data and 30% the test data.</p>
-<p>The sensor signals (accelerometer and gyroscope) were pre-processed
-by applying noise filters and then sampled in fixed-width sliding
-windows of 2.56 sec and 50% overlap (128 readings/window). The sensor
-acceleration signal, which has gravitational and body motion components,
-was separated using a Butterworth low-pass filter into body acceleration
-and gravity. The gravitational force is assumed to have only low
-frequency components, therefore a filter with 0.3 Hz cutoff frequency
-was used. From each window, a vector of features was obtained by
-calculating variables from the time and frequency domain. See <a href="./data/UCI%20HAR%20Dataset/features_info.txt">features_info.txt</a>
-for more details.</p>
-<p>Out of the initial 563 variables being measured, the <a href="./data/tidy.txt">tidy data</a> contains 180 obs. of 68 variables.
-The following contains the name and class of each column, as well as the
-first row of data as an example value:</p>
-<pre><code>## &#39;data.frame&#39;:    1 obs. of  68 variables:
-##  $ Subject                    : int 1
-##  $ Activity                   : chr &quot;WALKING&quot;
-##  $ tBodyAcc.mean...X          : chr &quot;0,277330758736842&quot;
-##  $ tBodyAcc.mean...Y          : chr &quot;-0,0173838185273684&quot;
-##  $ tBodyAcc.mean...Z          : chr &quot;-0,111148103547368&quot;
-##  $ tBodyAcc.std...X           : chr &quot;-0,283740258842105&quot;
-##  $ tBodyAcc.std...Y           : chr &quot;0,114461336747368&quot;
-##  $ tBodyAcc.std...Z           : chr &quot;-0,260027902210526&quot;
-##  $ tGravityAcc.mean...X       : chr &quot;0,935223201473684&quot;
-##  $ tGravityAcc.mean...Y       : chr &quot;-0,282165021263158&quot;
-##  $ tGravityAcc.mean...Z       : chr &quot;-0,068102864&quot;
-##  $ tGravityAcc.std...X        : chr &quot;-0,976609642526316&quot;
-##  $ tGravityAcc.std...Y        : chr &quot;-0,971305961473684&quot;
-##  $ tGravityAcc.std...Z        : chr &quot;-0,947717226105263&quot;
-##  $ tBodyAccJerk.mean...X      : chr &quot;0,0740416333157895&quot;
-##  $ tBodyAccJerk.mean...Y      : chr &quot;0,0282721095884211&quot;
-##  $ tBodyAccJerk.mean...Z      : chr &quot;-0,00416840617789474&quot;
-##  $ tBodyAccJerk.std...X       : chr &quot;-0,113615602435789&quot;
-##  $ tBodyAccJerk.std...Y       : chr &quot;0,0670025007684211&quot;
-##  $ tBodyAccJerk.std...Z       : chr &quot;-0,502699788526316&quot;
-##  $ tBodyGyro.mean...X         : chr &quot;-0,041830963526&quot;
-##  $ tBodyGyro.mean...Y         : chr &quot;-0,0695300462115789&quot;
-##  $ tBodyGyro.mean...Z         : chr &quot;0,0849448173042105&quot;
-##  $ tBodyGyro.std...X          : chr &quot;-0,473535485894737&quot;
-##  $ tBodyGyro.std...Y          : chr &quot;-0,0546077686594737&quot;
-##  $ tBodyGyro.std...Z          : chr &quot;-0,344266629473684&quot;
-##  $ tBodyGyroJerk.mean...X     : chr &quot;-0,0899975423705263&quot;
-##  $ tBodyGyroJerk.mean...Y     : chr &quot;-0,0398428709463158&quot;
-##  $ tBodyGyroJerk.mean...Z     : chr &quot;-0,0461309295021053&quot;
-##  $ tBodyGyroJerk.std...X      : chr &quot;-0,207421854757895&quot;
-##  $ tBodyGyroJerk.std...Y      : chr &quot;-0,304468510631579&quot;
-##  $ tBodyGyroJerk.std...Z      : chr &quot;-0,404255452631579&quot;
-##  $ tBodyAccMag.mean..         : chr &quot;-0,136971176556842&quot;
-##  $ tBodyAccMag.std..          : chr &quot;-0,219688645631579&quot;
-##  $ tGravityAccMag.mean..      : chr &quot;-0,136971176556842&quot;
-##  $ tGravityAccMag.std..       : chr &quot;-0,219688645631579&quot;
-##  $ tBodyAccJerkMag.mean..     : chr &quot;-0,141428809031579&quot;
-##  $ tBodyAccJerkMag.std..      : chr &quot;-0,0744717500625263&quot;
-##  $ tBodyGyroMag.mean..        : chr &quot;-0,160979552536842&quot;
-##  $ tBodyGyroMag.std..         : chr &quot;-0,186978364526316&quot;
-##  $ tBodyGyroJerkMag.mean..    : chr &quot;-0,298703679084211&quot;
-##  $ tBodyGyroJerkMag.std..     : chr &quot;-0,325324878894737&quot;
-##  $ fBodyAcc.mean...X          : chr &quot;-0,202794306326316&quot;
-##  $ fBodyAcc.mean...Y          : chr &quot;0,0897127264021053&quot;
-##  $ fBodyAcc.mean...Z          : chr &quot;-0,331560117789474&quot;
-##  $ fBodyAcc.std...X           : chr &quot;-0,319134719578947&quot;
-##  $ fBodyAcc.std...Y           : chr &quot;0,056040006846&quot;
-##  $ fBodyAcc.std...Z           : chr &quot;-0,279686751494737&quot;
-##  $ fBodyAccJerk.mean...X      : chr &quot;-0,170546964549579&quot;
-##  $ fBodyAccJerk.mean...Y      : chr &quot;-0,0352255241130632&quot;
-##  $ fBodyAccJerk.mean...Z      : chr &quot;-0,468999224631579&quot;
-##  $ fBodyAccJerk.std...X       : chr &quot;-0,133586606326316&quot;
-##  $ fBodyAccJerk.std...Y       : chr &quot;0,106739857136&quot;
-##  $ fBodyAccJerk.std...Z       : chr &quot;-0,534713440421053&quot;
-##  $ fBodyGyro.mean...X         : chr &quot;-0,339032197115789&quot;
-##  $ fBodyGyro.mean...Y         : chr &quot;-0,103059416434737&quot;
-##  $ fBodyGyro.mean...Z         : chr &quot;-0,255940940315789&quot;
-##  $ fBodyGyro.std...X          : chr &quot;-0,516691938736842&quot;
-##  $ fBodyGyro.std...Y          : chr &quot;-0,0335081597884211&quot;
-##  $ fBodyGyro.std...Z          : chr &quot;-0,436562227473684&quot;
-##  $ fBodyAccMag.mean..         : chr &quot;-0,128623450629474&quot;
-##  $ fBodyAccMag.std..          : chr &quot;-0,398032586842105&quot;
-##  $ fBodyBodyAccJerkMag.mean.. : chr &quot;-0,0571194000343158&quot;
-##  $ fBodyBodyAccJerkMag.std..  : chr &quot;-0,103492403002105&quot;
-##  $ fBodyBodyGyroMag.mean..    : chr &quot;-0,199252568986316&quot;
-##  $ fBodyBodyGyroMag.std..     : chr &quot;-0,321017953894737&quot;
-##  $ fBodyBodyGyroJerkMag.mean..: chr &quot;-0,319308593778947&quot;
-##  $ fBodyBodyGyroJerkMag.std.. : chr &quot;-0,381601911789474&quot;</code></pre>
+<div id="cleandataproject" class="section level2">
+<h2>CleanDataProject</h2>
+<div id="files-contained-in-this-repository" class="section level5">
+<h5>Files contained in this repository:</h5>
+<ul>
+<li>“CleanDataProject.Rproj” - the R project file created by RStudio
+upon initialization<br />
+</li>
+<li>“/data/” - doesn’t contain raw data, but contains raw data parsing
+txt files and the tidy, processed data<br />
+</li>
+<li>“CodeBook.Rmd” - raw markdown file containing the code book<br />
+</li>
+<li>“CodeBook.html” - knit markdown file with easy-to-read code
+book<br />
+</li>
+<li>“run_analysis.R” - data processing script, takes no parameters and
+follows the tidy data guidelines <a href="https://vita.had.co.nz/papers/tidy-data.pdf">here</a></li>
+</ul>
+</div>
+<div id="run_analysis.r-workflow" class="section level5">
+<h5><span class="math inline">\(run\_analysis.R\)</span> workflow:</h5>
+<ol style="list-style-type: decimal">
+<li>Test if the data has been downloaded before. If not, download
+it.</li>
+<li>Use <span class="math inline">\(fread()\)</span> to pull all
+relevant information from different <span class="math inline">\(csv\)</span> files.</li>
+<li>All individual files are combined using <span class="math inline">\(cbind\)</span> and <span class="math inline">\(rbind\)</span> to form a large data table.</li>
+<li>Columns are named according to the <a href="./data/UCI%20HAR%20Dataset/features.txt">features.txt</a>.</li>
+<li><span class="math inline">\(grepl()\)</span> pulls out only mean and
+standard deviation columns and subsets the data.</li>
+<li><span class="math inline">\(factor()\)</span> converts values in
+<span class="math inline">\(Activities\)</span> column to their relative
+descriptors.</li>
+<li><span class="math inline">\(ddply()\)</span> wraps up the process by
+finding column means for every column except the first two.</li>
+<li>Write the data to <a href="./data/tidy.txt">tidy.txt</a></li>
+</ol>
+<div id="read-data-using-read.csv.datatidy.txt-sep" class="section level6">
+<h6>Read data using <span class="math inline">\(read.csv(&quot;./data/tidy.txt&quot;, sep =
+&quot;;&quot;)\)</span></h6>
+</div>
 </div>
 </div>
 
